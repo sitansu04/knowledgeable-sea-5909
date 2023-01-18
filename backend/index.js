@@ -21,6 +21,6 @@ app.listen(process.env.port, async (req, res) => {
     console.log(`Connection Established at ${process.env.port}`);
   } catch (error) {
     console.log({ msg: "error in connextion to DB" });
-    console.log(error.message);
+    console.log(error);
   }
 });
