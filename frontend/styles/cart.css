@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;700&display=swap");
+
+header{
+    width: 80%;
+    border:1px solid black;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    padding: 5vh;
+    font-family: Montserrat, sans-serif;
+}
+#back{
+    text-decoration: none;
+    color: black;
+    margin-right: 30%;
+    font-size: 30px;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    padding: 5vh;
+}
+.logo{
+    text-decoration: none;
+    color: black;
+    margin-right: 30%;
+    font-size: 30px;
+}  
+#item_count{
+    padding-top: 10px;
+} 
+.container{
+    display: flex;
+}
+#item{
+    display: flex;
+    height: 200px;
+    width: 60%;
+    border: 1px solid red;
+}
+#item>img{
+    height:a
+
+}
