@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cart page</title>
-    <script src="https://kit.fontawesome.com/f41b656bbc.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/f41b656bbc.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./styles/cart.css" />
   </head>
   <body>
@@ -16,43 +19,100 @@
         <br />
         <p id="item_count">no of items</p>
       </header>
-      <div class="container">
-        <div id="item">
-                <img src="https://assets.burberry.com/is/image/Burberryltd/89002D92-34A4-4C70-AE4A-DF301EE13249.jpg?$BBY_V2_ML_3x4$&wid=368&hei=486" alt="">
-                <h3>Reversible Check Quilted Overshirt</h3>
-                <br>
-                <p>item id-</p><span>1223456</span>
-                <br>
-                <p>dark brown</p>
+      <div id="container">
+        <div>
+          <hr>
+          <div id="item">
+            <div>
+              <img
+                id="card_img"
+                src="https://assets.burberry.com/is/image/Burberryltd/89002D92-34A4-4C70-AE4A-DF301EE13249.jpg?$BBY_V2_ML_3x4$&wid=368&hei=486"
+                alt=""
+              />
+            </div>
+            <div>
+              <h3>Reversible Check Quilted Overshirt</h3>
+              <br />
+              <h2>item id-</h2>
+              <br />
+              <h5>dark brown</h5>
+            </div>
+          </div>
+          <hr>
+          <div id="item">
+            <div>
+              <img
+                id="card_img"
+                src="https://assets.burberry.com/is/image/Burberryltd/89002D92-34A4-4C70-AE4A-DF301EE13249.jpg?$BBY_V2_ML_3x4$&wid=368&hei=486"
+                alt=""
+              />
+            </div>
+            <div>
+              <h3>Reversible Check Quilted Overshirt</h3>
+              <br />
+              <h2>item id-</h2>
+              <br />
+              <h5>dark brown</h5>
+            </div>
+          </div>
+          <hr>
+          <div id="item">
+            <div>
+              <img
+                id="card_img"
+                src="https://assets.burberry.com/is/image/Burberryltd/89002D92-34A4-4C70-AE4A-DF301EE13249.jpg?$BBY_V2_ML_3x4$&wid=368&hei=486"
+                alt=""
+              />
+            </div>
+            <div>
+              <h3>Reversible Check Quilted Overshirt</h3>
+              <br />
+              <h2>item id-</h2>
+              <br />
+              <h5>dark brown</h5>
+            </div>
+          </div>
+          <hr>
         </div>
+
         <div id="payment">
-          <div>
+          <div id="payment_details">
             <span>Subtotal</span><span></span>
             <br />
+            <br />
             <span>estimate shipping</span><span>free</span>
+            <br />
             <br />
             <span>sales tax</span>
             <span>Calculated on Review & Pay step</span>
             <hr />
             <span>total</span>
             <span>amount</span>
-            <br>
-            <button>Checkout</button><br>
-            <button>Paypal</button>
+            <br />
+            <br />
+            <button id="checkout">Checkout</button><br /><br />
+            <button id="paypal"><i class="fa-brands fa-paypal"></i></button>
           </div>
-          <div>
-            <i class="fa-solid fa-box"></i><span>Free delivery & returns</span>
-            <br>
+          <div id="additional_info">
+            <i class="fa-solid fa-box"></i>&nbsp;&nbsp;&nbsp;<span
+              >Free delivery & returns</span
+            >
+            <br />
+            <br />
             <span>Shop with confidence with free returns.</span>
-            <br>
-            <br><br><br>
-            <span>BERCELLE accepts</span>
-            <br> 
-            <i class="fa-brands fa-apple-pay"></i>
-            <i class="fa-brands fa-cc-visa"></i>
-            <i class="fa-brands fa-cc-mastercard"></i>
-            <i class="fa-brands fa-cc-discover"></i>
-            <i class="fa-brands fa-cc-amex"></i>
+            <br />
+            <br /><br /><br />
+            <span style="font-size: 20px; font-weight: bold"
+              >BERCELLE accepts</span
+            >
+            <br />
+            <br />
+            <i id="card" class="fa-brands fa-apple-pay"></i>
+            &nbsp;&nbsp;
+            <i id="card" class="fa-brands fa-cc-visa"></i>&nbsp;&nbsp;
+            <i id="card" class="fa-brands fa-cc-mastercard"></i>&nbsp;&nbsp;
+            <i id="card" class="fa-brands fa-cc-discover"></i>&nbsp;&nbsp;
+            <i id="card" class="fa-brands fa-cc-amex"></i>
           </div>
         </div>
       </div>
