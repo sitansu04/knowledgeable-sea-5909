@@ -2,43 +2,94 @@
 
 header{
     width: 80%;
-    border:1px solid black;
+    /* border:1px solid black; */
     align-items: center;
     margin: auto;
     text-align: center;
     padding: 5vh;
     font-family: Montserrat, sans-serif;
 }
+body{
+    font-family: Montserrat, sans-serif;
+}
 #back{
     text-decoration: none;
     color: black;
-    margin-right: 30%;
+    margin-right: 42%;
     font-size: 30px;
 }
-.container{
+#container{
     width: 80%;
     margin: auto;
     padding: 5vh;
+    /* border: 1px solid black; */
 }
 .logo{
     text-decoration: none;
     color: black;
-    margin-right: 30%;
+    margin-right: 42%;
     font-size: 30px;
 }  
 #item_count{
     padding-top: 10px;
 } 
-.container{
+#container{
     display: flex;
 }
 #item{
     display: flex;
-    height: 200px;
-    width: 60%;
-    border: 1px solid red;
+    height:300px;
+    /* width: 400px; */
+    /* border: 1px solid red; */
+    flex-direction: row;
+    padding: 2vh;
+    
 }
-#item>img{
-    height:a
+#card_img{
+    width: 68%;
+}
+#payment{
+    margin-left: 150px;
+}
+#card{
+    font-size: 40px;
+}
+#payment_details{
+    /* border: 1px solid red; */
+    width: 350px;
+    padding: 5vh;
+}
+#payment_details>button{
+    width: 350px;
+    /* padding: 3vh; */
+}
+
+#checkout{
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 3vh;
+    font-size: 15px;
+}
+#checkout:hover{
+    cursor: pointer;
+    background-color: rgb(46, 46, 46);
+}
+.fa-paypal{
+    font-size: 40px;
+    color: white;
+}
+#paypal{
+    padding-top:7px ;
+    padding-bottom: 7px;
+    border: none;
+    background-color: black;
+}
+#paypal:hover{
+    cursor:pointer;
+    background-color: rgb(30, 30, 30);
+}
+#additional_info{
+    padding: 5vh;
 
 }

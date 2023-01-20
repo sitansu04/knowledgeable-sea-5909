@@ -8,7 +8,7 @@
 
 body {
   font-family: Montserrat, sans-serif;
-  background: transparent;
+  background:transparent;
   color: black;
   min-height: 100vh;
 }
@@ -62,7 +62,7 @@ nav{
 .dropdown-menu,
 .menu-right {
   position: absolute;
-  background: transparent;
+  background: white;
   width: 100%;
   top: 50px;
   left: 0;
@@ -102,7 +102,7 @@ nav{
   transition: all 0.3s ease;
 }
 .mega-menu .content {
-  background: transparent;
+  background: white;
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
