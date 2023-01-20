@@ -61,6 +61,6 @@
   }
   #details{
     width: 50%;
-    height: 1800px;
+    height: auto;
     border: 1px solid black;
   }
