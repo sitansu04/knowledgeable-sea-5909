@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;700&display=swap");
+
+#body_1{
+    height: 600px;
+    width: 100%;
+    background: url("../images/body_1_back.jpeg");
+    /* background-image: calc(100rem 2vh); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Montserrat, sans-serif;
+
+}
+#body_1>img{
+    width: 100%;
+}
+#body_1>h1{
+    padding-top: 30%;
+    padding-left: 20px;
+}
+#body_2{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2vh;
+}
+#body_2 div{
+    width: 33.33%;
+    height: 500px;
+    /* border: 1px solid black; */
+}
+#body_2-1{
+    background-image: url("../images/body_2-3.jpeg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#body_2-2{
+    background-image: url("../images/body_2-1.jpeg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+#body_2-2:hover{
+    background-image: url("../images/bosy2_hover.jpeg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+#body_2-3{
+    background-image: url("../images/body_2-4.jpeg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+#body_2 h3{
+    padding: 5vh;
+}
+#body3{
+    text-align: center;
+    padding: 4vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+#body3 h1{
+    padding: 1vh;
+}
+
+#body3 h1:hover{
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    border-radius: 30px 0px 30px 0px;
+}
+#body3_1{
+    width: 420px;
+    margin: 20vh;
+}
+#body4{
+    height: 700px;
+    background: url("../images/body_2-2.jpeg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#body4 h3{
+    /* padding-top: 25%; */
+}
+
+#body4-1{
+    /* border: 1px solid black; */
+    width: 20%;
+    padding-top: 25%;
+    padding-left: 30px;
+    color: white;
+}
