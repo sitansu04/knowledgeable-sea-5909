@@ -1,0 +1,35 @@
+#selecttags{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#selecttags select{
+width: 20%;
+padding: 1vh;
+border: none;
+background-color: white;
+border-bottom: 1px solid black;
+}
+#selecttags select>option:hover{
+    background-color: black;
+    color: white;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+#container>div{
+    /* width: 23%; */
+    text-align: center;
+
+}
+#container>div> img{
+    width: 100%;
+}
+#container>div> p:nth-child(2){
+    font-weight:bold ;
+}
+#container>div> p{
+    padding-top: 10px;
+}

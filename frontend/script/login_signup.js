@@ -1,4 +1,4 @@
-const baseUrl = `http://localhost:8080`;
+const baseUrl = `http://localhost:7070`;
 const usersUrl = `${baseUrl}/users`;
 const signinUrl = `${usersUrl}/register`;
 const loginUrl = `${usersUrl}/login`;
@@ -68,6 +68,7 @@ let login_user = async (obj) => {
   console.log(res);
   if (res.ok) {
     let token = await res.json();
+    console.log(token)
     localStorage.setItem("accessToken", token.token);
     if (token.token) {
       window.location.href = "index.html";

@@ -3,12 +3,18 @@ const cors = require("cors");
 require("dotenv").config();
 const { connection } = require("./config/db.js");
 const { userRouter } = require("./routes/user.routes.js");
+const { ProductRouter } = require("./routes/product.routes.js");
+const { Adminrouter } = require("./routes/admin.routes.js");
+const { CartRouter } = require("./routes/cart.routes.js");
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
 app.use("/users", userRouter);
+app.use("/admin",Adminrouter);
+app.use("/carts",CartRouter);
+app.use("/products",ProductRouter)
 
 app.get("/", async (req, res) => {
   res.send({ msg: "API STARTED" });

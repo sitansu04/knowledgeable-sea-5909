@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>All Products</title>
     <link rel="stylesheet" href="./navbar/nav.css" />
-    <link rel="stylesheet" href="./styles/index.css" />
     <script
       src="https://kit.fontawesome.com/f41b656bbc.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./script/index.js"></script>
+    <script src="./script/allproducts.js"></script>
+    <link rel="stylesheet" href="./styles/allproducts.css" />
   </head>
   <body>
     <header class="header">
@@ -155,76 +155,74 @@
         <a href="#"><i class="fa-regular fa-user"></i></a>
         <span>profile</span>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="#"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+        <a href="./cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
       </div>
     </header>
-    <div>
-      <div id="body_1">
-        <!-- <img src="./images/body_1_back.jpeg" alt=""> -->
-        <h1>Womens Bag</h1>
-      </div>
-      <div id="body_2">
-        <div id="body_2-1">
-          <h3>Scarves</h3>
-        </div>
-        <div onclick="redirect()" id="body_2-2">
-          <h3>Men's Coat <br>& Jacket</h3>
-        </div>
-        <div id="body_2-3">
-          <h3>Women's Coat <br> & Jacket</</h3>
-        </div>
-      </div>
-      <div id="body3">
-        <div id="body3_1">
-          <h1>Women's Sneaker</h1>
-          <h1>Men's Sneker</h1>
-          <h1>Women's Winter Edit</h1>
-          <h1>Men's Winter Edit</h1>
-
-
-        </div>
-      </div>
-      <div id="body4">
-        <div id="body4-1">
-          <h3>TAKE A LEAP</h3>
-        <br>
-        <h1>YEAR OF THE <br> RABBIT GIFTING</h1>
-        <br>
-        <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;<span>FOR HER</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;<span>FOR HIM</span>
-        </div>
-        
-      </div>
+    <div id="selecttags"> 
+        <select name="sort" id="sort">
+            <option value="Default">Default</option>
+            <option value="Price High">Price High</option>
+            <option value="Price Low">Price Low</option>
+        </select>
+        <hr>
+        <select name="catagory" id="catagory">
+            <option value="Default">Default</option>
+            <option value="Coats">Coats</option>
+            <option value="Jackets">Jackets</option>
+            <option value="Shirts">Shirts</option>
+            <option value="Trench Coats">Trench Coats</option>
+        </select>
+        <br><br>
+        <select name="style" id="style">
+            <option value="OverShirt">OverShirt</option>
+            <option value="Parkas">Parkas</option>
+            <option value="Pea Coats">Pea Coats</option>
+            <option value="Leather">Leather</option>
+        </select>
     </div>
+    <br><br>
+    <hr>
+    <div class="busket" id="container">
+       <!-- <div id="container-child"> -->
+            <!-- <p><b>The Long Kensington Heritage Trench Coat</b></p>
+            <br>
+            <p>$2234</p>
+            <br>
+            <p>3 Colours</p>
+            <br>
+            <p>Regular Fit</p> -->
+        <!-- </div> -->
+    </div>
+    <br><br>
     <hr>
     <footer >
-      <div id="footer-1">
-        <h3>Sign up</h3>
-        <br>
-        <p>Sign up below for updates about the world of Burberry, including collection launches and early access to limited-edition products and collaborations</p>
-        <button id="signup" class="custom-btn btn-16">Sign Up</button>
-      </div>
-      <div id="footer-2">
-        <a href="#">Store Locator &nbsp; <i class="fa-solid fa-location-dot"></i></a>
-        <br>
-        <br>
-        <a href="#">Download Our App</a>
-        <br>
-        <br>      
-        <i class="fa-brands fa-android"></i> &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-brands fa-apple"></i>
-        <br><br>
-        <a href="#">Book an Appoinment</a>
-      </div>
-      <div>
-        <a href="#">Customer Servive</a>
-        <br><br>
-        <a href="#">Legal & Cookies</a>
-        <br><br>
-        <a href="#">Follow Us</a>
-        <br><br>
-        <a href="#">Our Company</a>
-      </div>
-      <div></div>
-    </footer>
-    
+        <div id="footer-1">
+          <h3>Sign up</h3>
+          <br>
+          <p>Sign up below for updates about the world of Burberry, including collection launches and early access to limited-edition products and collaborations</p>
+          <button id="signup" class="custom-btn btn-16">Sign Up</button>
+        </div>
+        <div id="footer-2">
+          <a href="#">Store Locator &nbsp; <i class="fa-solid fa-location-dot"></i></a>
+          <br>
+          <br>
+          <a href="#">Download Our App</a>
+          <br>
+          <br>      
+          <i class="fa-brands fa-android"></i> &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-brands fa-apple"></i>
+          <br><br>
+          <a href="#">Book an Appoinment</a>
+        </div>
+        <div>
+          <a href="#">Customer Servive</a>
+          <br><br>
+          <a href="#">Legal & Cookies</a>
+          <br><br>
+          <a href="#">Follow Us</a>
+          <br><br>
+          <a href="#">Our Company</a>
+        </div>
+        <div></div>
+      </footer>
   </body>
 </html>
