@@ -50,7 +50,7 @@ function displayproduct(data) {
         img.setAttribute("src",e["img-1"]);
         div.append(img)
         // cointainer.append(div)
-    });
+    })
 }
 
-document.getElementById("item_count")appe`No of items${cartitems.length}`)
+// document.getElementById("item_count")appe`No of items${cartitems.length}`)
