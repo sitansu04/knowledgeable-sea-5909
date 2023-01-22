@@ -1,9 +1,9 @@
 const express = require("express");
 const { ProductModel } = require("../Models/products.model");
-const {
-  authenticate,
-} = require("../Middelwares/admin.authentication.middelwres");
-const { query } = require("express");
+// const {
+//   authenticate,
+// } = require("../Middelwares/admin.authentication.middelwres");
+// const { query } = require("express");
 
 const app = express();
 const ProductRouter = express.Router();
@@ -79,7 +79,19 @@ ProductRouter.get("/", async (req, res) => {
   }
 });
 
-ProductRouter.use(authenticate);
+
+ProductRouter.delete("/delete/:id",async(req,res)=>{
+  let id=req.params.id
+  try {
+    let data=await ProductModel.findByIdAndDelete({"_id":id});
+    res.send("deleted");
+  } catch (error) {
+    console.log(error);
+  }
+})
+
+
+// ProductRouter.use(authenticate);
 
 ProductRouter.get("/admin", async (req, res) => {
   const adminId = req.body.adminId;
@@ -120,22 +132,15 @@ ProductRouter.patch("/update/:id", async (req, res) => {
     res.send({ post_msg: error });
   }
 });
-ProductRouter.delete("/delete/:id", async (req, res) => {
-  const id = req.params.id;
-  const data = await ProductModel.findOne({ _id: id });
-  const admin_id = data.adminId;
-  const admin_req_id = req.body.adminId;
-  try {
-    if (admin_req_id != admin_id) {
-      res.send("You are not authorized");
-    } else {
-      await ProductModel.findByIdAndDelete({ _id: id });
-      res.send(`Product is delete of ${id}`);
-    }
-  } catch (error) {
-    res.send({ post_msg: error });
-  }
-});
+// ProductRouter.delete("/delete/:id", async (req, res) => {
+//   const id = req.params.id;
+//   try {
+//     await ProductModel.findByIdAndDelete({ _id: id });
+//     res.send(`Product is delete of ${id}`);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
 
 module.exports = {
   ProductRouter,

@@ -2,7 +2,7 @@ const baseUrl = `http://localhost:7070`;
 const usersUrl = `${baseUrl}/users`;
 const signinUrl = `${usersUrl}/register`;
 const loginUrl = `${usersUrl}/login`;
-
+const aadminUrl = `${baseUrl}/admins/login`;
 async function signup() {
   checkValues();
 }
@@ -68,10 +68,40 @@ let login_user = async (obj) => {
   console.log(res);
   if (res.ok) {
     let token = await res.json();
-    console.log(token)
+    console.log(token);
     localStorage.setItem("accessToken", token.token);
+    localStorage.setItem("username", token.name);
     if (token.token) {
       window.location.href = "index.html";
     }
   }
 };
+
+async function adminlogin() {
+  let login_email = document.getElementById("login_email").value;
+  let login_pass = document.getElementById("login_pass").value;
+  let login_obj = {
+    email: login_email,
+    password: login_pass,
+  };
+  console.log(login_obj);
+  aadminlogin_user(login_obj);
+}
+
+async function aadminlogin_user(obj) {
+  let res = await fetch(aadminUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(obj),
+  });
+
+  if(res.ok){
+    let token=await res.json();
+    console.log(token.token);
+    localStorage.setItem("admintoken",token.token);
+    alert("admin login successfull");
+    window.location.href = "admin.html";
+  }
+}
