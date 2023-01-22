@@ -8,6 +8,15 @@ const soltRounds=5;
 
 const UserRouter=express.Router();
 
+UserRouter.get("/",async(req,res)=>{
+    try {
+        let data=await UserModel.find();
+        res.send(data);
+    } catch (error) {
+        console.log(error);
+    }
+})
+
 UserRouter.post("/register",async (req,res)=>{
     const {name,email,password,age,phoneNo,gender}=req.body
     try {
@@ -43,6 +52,7 @@ UserRouter.post("/login",async (req,res)=>{
     const {email,password}=req.body
     try {
         const user= await UserModel.find({email});
+        const name=user[0].name
         const hash= user[0].password
         const userId=user[0]._id;
         if(user.length>0){
@@ -51,7 +61,7 @@ UserRouter.post("/login",async (req,res)=>{
                 // result == true
                 if(result){
                     const token = jwt.sign({ userId:userId }, process.env.key);
-                    res.send({"msg":"Login Succesfuly","token":token})
+                    res.send({"msg":"Login Succesfuly","token":token,"name":name})
                 }else{
                     res.send("Wrong Credentials")
                 }

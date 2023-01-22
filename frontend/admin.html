@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="./styles/admin.css" />
+    <title>Admin Panel</title>
+  </head>
+  <body>
+    <div id="top-section">
+      <h1>Admin Panel</h1>
+      <a id="logout-link" href="./login_signup.html">Log Out</a>
+    </div>
+    <div id="main-div">
+      <div id="add_item_form">
+        <h1>Add Product to API</h1>
+        <form action="">
+          <label for="product">Product Name</label><br />
+
+          <input id="name" type="text" placeholder="Product name" /> <br />
+          <label for="">Price of Product</label><br />
+          <input id="price" type="number" placeholder="Product Price" /><br />
+          <label id="" for="Size">Size</label> <br />
+          <input type="text" id="Size" placeholder="Size" /><br />
+          <label for="">Image URL</label><br />
+          <input id="img" type="text" placeholder="URL" /><br />
+          <!-- <label for="">Category</label><br /> -->
+          <!-- <select name="" id="category">
+            <br />
+            <option value="">Select</option>
+            <option value="vegetable">Vegetables</option>
+            <option value="fruits">Fruits</option>
+            <option value="health&medicine">Health & Medicine</option>
+            <option value="foodgrain">Foodgrain & Oil</option>
+            <option value="snacks">Snacks</option>
+          </select> -->
+          <br />
+          <input type="submit" />
+        </form>
+      </div>
+      <div id="users_table">
+        <h1>Registered Users</h1>
+        <table>
+          <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+          </thead>
+          <tbody id="table_body">
+            <tr>
+              <td>abc</td>
+              <td>adc@gmail.com</td>
+            </tr>
+            <tr>
+                <td>abc</td>
+                <td>adc@gmail.com</td>
+            </tr>
+            <tr>
+                <td>abc</td>
+                <td>adc@gmail.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="bottom_section"></div>
+  </body>
+</html>
+<script src="./script/admin.js"></script>

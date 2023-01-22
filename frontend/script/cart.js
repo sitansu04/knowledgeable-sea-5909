@@ -1,36 +1,3 @@
-// let cartdata = JSON.parse(localStorage.getItem("cartdata"));
-// // console.log(cartdata);
-
-// // let container = document.querySelector("#container");
-// function displayproduct(cartdata) {
-// //   console.log(typeof(cartdata))
-//   let products=cartdata.forEach((item) => {
-//     let div = document.createElement("div");
-//     let img = document.createElement("img");
-//     img.setAttribute("src", item["img-1"]);
-//     // let br=document.createElement("br");
-//     let title = document.createElement("p");
-//     title.innerHTML = item.title;
-//     let price = document.createElement("p");
-//     price.innerHTML = item.price;
-//     let colors = document.createElement("p");
-//     colors.innerHTML = "Colours";
-//     let size = document.createElement("p");
-//     size.innerHTML = item["size-rage"];
-//     let button = document.createElement("button");
-//     button.innerHTML = "remove";
-//     // button.addEventListener("click", () => {
-//     //   cartdata.push(item);
-//     //   console.log(cartdata)
-//     //   localStorage.setItem("cartdata", JSON.stringify(cartdata));
-//     // });
-//     div.append(img, title, price, colors, size, button);
-//     // container.append(div);
-
-// });
-// console.log(products);
-// }
-// displayproduct();
 
 
 // // let cartdata =  JSON.parse(localStorage.getItem("cartdata"));
@@ -38,19 +5,55 @@
 // document.querySelector("#item_count").innerHTML=`No of items ${cartdata.length}`
 
 
-let cartitems=JSON.parse(localStorage.getItem("cartdata"))
+let cartitems=JSON.parse(localStorage.getItem("cartdata"))||[]
 console.log(cartitems)
 displayproduct(cartitems);
 
 function displayproduct(data) {
     let cointainer=document.getElementById("child-container")
-    data.forEach(e => {
+    cointainer.innerHTML="";
+    data.forEach((e,index) => {
         let div=document.createElement("div");
-        let img=document.createElement("img")
-        img.setAttribute("src",e["img-1"]);
-        div.append(img)
-        // cointainer.append(div)
-    });
+        div.setAttribute("id","item");
+        let div1=document.createElement("div");
+        let image=document.createElement("img");
+        image.setAttribute("src",e["img-1"]);
+        image.setAttribute("id", "card_img")
+        div1.append(image);
+        let div2=document.createElement("div");
+        let title=document.createElement("p");
+        title.innerHTML=e["title"];
+        let h3=document.createElement("h5");
+        h3.innerHTML=`Product id-${e["_id"]}`;
+        let color=document.createElement("h5");
+        color.innerHTML="Dark Bown"
+        let button=document.createElement("button")
+        button.innerHTML=`Remove <br>
+        <i class='fa fa-remove'></i>
+        `
+        button.setAttribute("id","remove_btn")
+        button.addEventListener("click",()=>{
+            removeelement(e,index);
+        })
+        div2.append(title,h3,color,button)
+        div.append(div1,div2)
+        cointainer.append(div)
+        // console.log(e.title)
+    })
 }
 
-document.getElementById("item_count")appe`No of items${cartitems.length}`)
+document.getElementById("item_count").innerHTML=`No of items : ${cartitems.length}`
+let total_amount=0
+for(let i=0;i<cartitems.length;i++){
+    total_amount+=cartitems[i].price;
+}
+// console.log(total_amount);
+document.getElementById("amount").innerHTML=`${total_amount}$`
+document.getElementById("amount-1").innerHTML=`${total_amount}$`
+
+
+function removeelement(e,index){
+    cartitems.splice(index,1);
+    localStorage.setItem("cartdata",JSON.stringify(cartitems));
+    displayproduct(cartitems);
+}

@@ -10,13 +10,12 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./styles/cart.css" />
-    <script src="./script/cart.js"></script>
   </head>
   <body>
     <div>
       <header>
-        <a href="#" id="back"><i class="fa-solid fa-arrow-left"></i></a>
-        <a href="#" class="logo">BERCELLE</a>
+        <a href="./allproducts.html" id="back"><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="./index.html" class="logo">BERCELLE</a>
         <br />
         <p id="item_count">no of items</p>
       </header>
@@ -78,17 +77,17 @@
 
         <div id="payment">
           <div id="payment_details">
-            <span>Subtotal</span><span></span>
+            <span>Subtotal</span><span id="amount"></span>
             <br />
             <br />
-            <span>estimate shipping</span><span>free</span>
+            <span>estimate shipping</span><span id="gap">free</span>
             <br />
             <br />
             <span>sales tax</span>
             <span>Calculated on Review & Pay step</span>
             <hr />
             <span>total</span>
-            <span>amount</span>
+            <span id="amount-1">amount</span>
             <br />
             <br />
             <button id="checkout">Checkout</button><br /><br />
@@ -120,3 +119,5 @@
     </div>
   </body>
 </html>
+<script src="./script/cart.js"></script>
+
