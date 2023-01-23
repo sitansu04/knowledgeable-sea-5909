@@ -20,4 +20,10 @@
  - Postman
  
  ## Functionalities
+  - login and signup 
+  - landing page
+  - every product has its own page
+  - admin page
+  - post and delete item
+  - cart page
  
